@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>H. Olson Design Studio</title>
+    <link rel="icon" type="image/x-icon" href="images/Logo.png">
+
+    
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.typekit.net/wra8jko.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+</head>
+
+<body>
+
+    <div>
+    
+    <header>
+
+    <div id="navdiv-head">
+
+        <div id="navdiv-home">
+            <a href="index.html">
+            <img id="nav-logo" src="images/Logo.png" alt="H."></a>
+        </div>
+
+        <div class="navdiv-text" >
+            <nav id="topnav" >
+                <a href="about.html">About</a>
+                <a href="contact.html">Connect</a>
+            </nav>
+        </div>
+        
+    </div>
+
+    </header>
+    
+
+   
+    <main>
+
+        <img id="pageloadgif" src="images/Personal.gif" alt="">
+        
+        <div class="portfoliodoc">
+        <img class="portfoliodocimg" src="images/CPDoc1.png" alt="Personal Brand Guide">
+        <img class="portfoliodocimg" src="images/CPDoc2.png" alt="Personal Brand Guide">
+        <img class="portfoliodocimg" src="images/CPDoc3.png" alt="Personal Brand Guide">
+        </div>
+
+        <div id="businesscard">
+            <img src="images/BusinessCard.png" alt="contactinfoimg">
+        </div>
+
+    </main>
+    
+
+    
+    <footer>
+        <div id="navdiv-foot">
+            
+            <div id="contactbutton">
+                <button><h1>Contact</h1></button>
+                </div>
+
+            <div id="navdiv-insta">
+                <a href="https://www.instagram.com/designedby.han/">
+                <img id="insta" src="images/Instagram.png" alt="Instagram">
+                </a>
+            </div>
+
+        </div>
+
+    </footer>
+
+    </div>
+
+</body>
+
+</html>
+
+<script>
+
+     // Page Load Animation 
+     $(".portfoliodoc").hide();
+    $("#pageloadgif").delay("slow").fadeOut();
+    $(".portfoliodoc").delay("slow").fadeIn();
+
+    // Instagram Mouseover
+
+    $(document).ready(function(){
+
+    $("#insta").hover(function(){
+
+    $(this).attr({src:"images/InstagramHover.png"});
+
+    });
+
+    $("#insta").mouseout(function(){
+
+    $(this).attr({src:"images/Instagram.png"});
+
+    });
+
+
+    // BusinessCard Popup
+
+    $("#businesscard").hide();
+    $("#contactbutton").click(function(){
+    $("#businesscard").toggle();
+    });
+
+    });
+
+ </script>
